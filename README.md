@@ -26,25 +26,20 @@ We have to use a Neural Network instead of a Q table incase of Deep Q learning. 
 
 ## Model Architecture
 We all know the effectiveness of CNNs when it comes to image based data. So, I made a CNN with the following architecture. I have experimented with various configurations and found this most suited for the application. Added two hidden layers to understand the task and give the respective output action to the agent. Now we can just train the network and get some good outputs but there are problems with this approach discussed in next section.
-<img src="files/media/image11.png" width="800" height="300">
+<img src="files/media/image11.png" align="center" width="800" height="300">
 
 
 ## Double DQN
 
 <img src="files/media/Double DQN.png" align="right" width="400" height="300">  
 
-To summarize, Double DQN employes two networks. Let's say, one is the training network and another as the predicting network. Predicting network plays the game and gains experience to store with it's knowledge level, the training network uses the stored experiences to train the network in a regular interval. Every certain period, the trained network transfers it's knowledge to the predicting network. This way, the learning is more stable as the agent levels up linearly, do not fluctuate or make random mistakes. If there is only one network, the learning and playing takes place using the same network which might make a particular action overvalued. This is called the maximization bias which results in overestimation of a particular action but using Double DQN overcomes this by using two networks.
+To summarize, Double DQN employes two networks. Let's say, one is the training network and another as the predicting network. Predicting network plays the game and gains experience to store with it's knowledge level, the training network uses the stored experiences to train the network in a regular interval. Every certain period, the trained network transfers it's knowledge to the predicting network.   
+
+This way, the learning is more stable as the agent levels up linearly, do not fluctuate or make random mistakes. If there is only one network, the learning and playing takes place using the same network which might make a particular action overvalued. This is called the maximization bias which results in overestimation of a particular action but using Double DQN overcomes this by using two networks.
 Please refer here for a comprehensive explanation on Double DQN and why it is needed. 
 
 
-
-<img align="center" src="files/media/image3.png" width="500" height="200">
-
-
-
 ## Training
-
-## Online Training
 
 Our network consists of two main parts, which is the training network and the predicting network. As we have discussed in the double deep Q learning section, these are our two estimators. The pseudo code of our implementation can seen below.
 
@@ -53,12 +48,12 @@ The figure below shows how the overview of our network would be, the training ne
 
 
 ### Loss
-<img src="files/media/image2.png" align="right" width="400" height="350">
+<img src="files/media/image2.png" align="right" width="350" height="300">
 
 The loss graph will show that the network is learning better after each epoch as it shows the overall the network is making better decisions. The loss graph is drawn for the training network. The loss graph is much smoother after we reduced the learning rate to a very small value and we have also smoothend the loss value using Tensorboard. The following graph is what we got for the final iteration of our implementation. 
 
 ### Reward Graph
-<img src="files/media/image5.png" align="right" width="400" height="350">
+<img src="files/media/image5.png" align="right" width="350" height="300">
 
 The rewards graph will show that as the epochs keep increasing the rewards will also increase because as the network learns more, it will perform actions which gives it the maximum reward. The original paper where they developed the Double DQN technique, the authors ran the environment for 250M epochs compared to us, we only ran the training for 250K times.
 
