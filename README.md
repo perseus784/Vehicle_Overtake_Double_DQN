@@ -6,6 +6,12 @@ This Repo contains code and instructions for implementing Double DQN Reinforcemn
 ***Idea:** The main idea is to learn how to do an overtaking action using Double DQN RL in a top-down view highway environment.
 Since this project uses an OpenAI Gym like format, it will be easy for anyone to modify this project their gym like environment within seconds.*
 
+## Prerequisites
+* Python
+* Reinforcement Learning
+* Deep Q Learning and DQNs
+* A little bit of Tensorflow
+
 ## Requirements
 * Python 3.7
 * Tensorflow 2.3.0
@@ -15,17 +21,22 @@ Since this project uses an OpenAI Gym like format, it will be easy for anyone to
 * In this case, get [Highway Environment](https://github.com/eleurent/highway-env)
 
 ## Deep Reinforcement Learning
-
+As mentioned earlier, the repo assumes you have atleast beginner level knowledge to Deep RL. if not, please go through [this](https://github.com/perseus784/SaturnMind) for deep RL and [this](https://medium.com/@ipaar3/saturnmind-94586f0d0158) for reinforcement learning with easy examples. 
+We have to use a Neural Network instead of a Q table incase of Deep Q learning. As we know, RL is an online training algorithm and does not require a dataset and generates it's own samples on the go.
 
 ## Model Architecture
+We all know the effectiveness of CNNs when it comes to image based data. So, I made a CNN with the following architecture. I have experimented with various configurations and found this most suited for the application. Added two hidden layers to understand the task and give the respective output action to the agent. Now we can just train the network and get some good outputs but there are problems with this approach discussed in next section.
 <img src="files/media/image11.png" width="800" height="300">
 
 
 ## Double DQN
-<img align="center">
 
-<img src="files/media/Double DQN.png" width="800" height="400">
-</p>  
+<img src="files/media/Double DQN.png" align="right" width="400" height="300">  
+
+To summarize, Double DQN employes two networks. Let's say, one is the training network and another as the predicting network. Predicting network plays the game and gains experience to store with it's knowledge level, the training network uses the stored experiences to train the network in a regular interval. Every certain period, the trained network transfers it's knowledge to the predicting network. This way, the learning is more stable as the agent levels up linearly, do not fluctuate or make random mistakes. If there is only one network, the learning and playing takes place using the same network which might make a particular action overvalued. This is called the maximization bias which results in overestimation of a particular action but using Double DQN overcomes this by using two networks.
+Please refer here for a comprehensive explanation on Double DQN and why it is needed. 
+
+
 
 <img align="center" src="files/media/image3.png" width="500" height="200">
 
