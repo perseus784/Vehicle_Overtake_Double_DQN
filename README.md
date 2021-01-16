@@ -77,9 +77,10 @@ Open command prompt on folder rl_overtake and do *python [trail_run.py](https://
 We built a double deep Q learning network and ran the network on the highway environment. After reiterating for multiple times to get the hyperparamters right, we finally got a version which worked. We can see our agent in action below. Ofcourse, the agent is not perfect because the training is just run for 250k iterations while the standard was to run for 250M iterations. But still we can see the network is able to learn and perform well in most conditions.
 
 <p float = "left">
-<img src="files/media/image14.gif" width="400" height="200">
-    <img src="files/media/image14.gif" width="400" height="200">
-<img src="files/media/image14.gif" width="400" height="200">
+<img src="files/media/res1.gif" width="400" height="200">
+<img src="files/media/res2.gif" width="400" height="200">
+<img src="files/media/res3.gif" width="400" height="200">
+<img src="files/media/res4.gif" width="400" height="200">
 
 </p> 
 
