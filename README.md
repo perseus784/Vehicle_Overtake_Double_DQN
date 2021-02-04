@@ -40,7 +40,7 @@ Please refer here for a comprehensive explanation on Double DQN and why it is ne
 
 
 ## Training
-<img src="files/media/pseoudocode.jpg" align="right" width="350" height="400">
+<img src="files/media/pseoudocode.png" align="right" width="350" height="400">
 Our network consists of two main parts, which is the training network and the predicting network. As we have discussed in the double deep Q learning section, these are our two estimators. The pseudo code of our implementation can seen below.
 
 
