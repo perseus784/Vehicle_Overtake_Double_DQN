@@ -43,7 +43,7 @@ We all know the effectiveness of CNNs when it comes to image based data. So, I m
 Please refer [here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c) for a comprehensive explanation on Double DQN and why it is needed. 
 
 ## Training
-<img src="files/media/pseoudocode.png" align="right" width="350" height="400"> 
+<img src="files/media/pseoudocode.png" align="right" width="350" height="380"> 
 
 * Our network consists of two main parts, which is the training network and the predicting network. As we have discussed in the double deep Q learning section, these are our two estimators. The pseudo code of our implementation can seen here.
 
@@ -57,14 +57,14 @@ Please refer [here](https://medium.com/@ipaar3/explaining-double-q-learning-for-
 
 
 ### Loss
-<img src="files/media/image2.png" align="right" width="250" height="200">
+<img src="files/media/image2.png" align="right" width="300" height="200">
 
 * The loss graph will show that the network is learning better after each epoch as it shows the overall the network is making better decisions. The loss graph is drawn for the training network. 
 * The loss graph is much smoother after we reduced the learning rate to a very small value and we have also smoothend the loss value using Tensorboard. The following graph is what we got for the final iteration of our implementation. 
 <br />
 
 ### Reward Graph
-<img src="files/media/image5.png" align="right" width="250" height="200">
+<img src="files/media/image5.png" align="right" width="300" height="200">
 
 * The rewards graph will show that as the epochs keep increasing the rewards will also increase because as the network learns more, it will perform actions which gives it the maximum reward. The original paper where they developed the Double DQN technique, the authors ran the environment for 250M epochs compared to us, we only ran the training for 250K times.
 
