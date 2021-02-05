@@ -48,12 +48,14 @@ Please refer here for a comprehensive explanation on Double DQN and why it is ne
 ## Training
 <img src="files/media/pseoudocode.png" align="right" width="350" height="400"> 
 
-* Our network consists of two main parts, which is the training network and the predicting network. As we have discussed in the double deep Q learning section, these are our two estimators. The pseudo code of our implementation can seen below.
+* Our network consists of two main parts, which is the training network and the predicting network. As we have discussed in the double deep Q learning section, these are our two estimators. The pseudo code of our implementation can seen here.
 
+* [Better explained here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c)
 
 * The training network will train on the data and gather the best parameters for the model. These parameters are then sent to the predicting network, which will execute these actions on the state and then send the results back to the training network. The training network will further use this data to tweak its parameters and train again. By doing this operation of leveling up, we teach the agent how to overtake depending on the state and the actions. Two main parameters are tracked here:
+<br />
+<br />
 
-[Better explained here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c)
 
 ### Loss
 <img src="files/media/image2.png" align="right" width="250" height="200">
