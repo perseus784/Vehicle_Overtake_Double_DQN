@@ -54,6 +54,7 @@ Please refer [here](https://medium.com/@ipaar3/explaining-double-q-learning-for-
 * The training network will train on the data and gather the best parameters for the model. These parameters are then sent to the predicting network, which will execute these actions on the state and then send the results back to the training network. 
 * The training network will further use this data to tweak its parameters and train again. By doing this operation of leveling up, we teach the agent how to overtake depending on the state and the actions. Two main parameters are tracked here:
 <br />
+<br />
 
 
 ### Loss
