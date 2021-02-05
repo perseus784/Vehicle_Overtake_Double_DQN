@@ -27,10 +27,10 @@ As mentioned earlier, the repo assumes you have atleast beginner level knowledge
 We have to use a Neural Network instead of a Q table incase of Deep Q learning. As we know, RL is an online training algorithm and does not require a dataset and generates it's own samples on the go.
 
 ## Model Architecture
-We all know the effectiveness of CNNs when it comes to image based data. So, I made a CNN with the following architecture. I have experimented with various configurations and found this most suited for the application. Added two hidden layers to understand the task and give the respective output action to the agent. Now we can just train the network and get some good outputs but there are problems with this approach discussed in next section.
+We all know the effectiveness of CNNs when it comes to image based data. So, I made a CNN with the following architecture. I have experimented with various configurations and found this most suited for the application. Added two hidden layers to understand the task and give the respective output action to the agent. Now we can just train the network and get some good outputs but there are problems with this approach discussed in next section.[Better and more details here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c)
+
 <img src="files/media/image11.png" align="center" width="800" height="300">
 
-[Better explained here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c)
 
 
 ## Double DQN
@@ -40,10 +40,7 @@ We all know the effectiveness of CNNs when it comes to image based data. So, I m
 * To summarize, Double DQN employes two networks. Let's say, one is the training network and another as the predicting network. Predicting network plays the game and gains experience to store with it's knowledge level, the training network uses the stored experiences to train the network in a regular interval. Every certain period, the trained network transfers it's knowledge to the predicting network.   
 
 * This way, the learning is more stable as the agent levels up linearly, do not fluctuate or make random mistakes. If there is only one network, the learning and playing takes place using the same network which might make a particular action overvalued. This is called the maximization bias which results in overestimation of a particular action but using Double DQN overcomes this by using two networks.
-Please refer here for a comprehensive explanation on Double DQN and why it is needed. 
-
-[Better explained here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c)
-
+Please refer [here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c) for a comprehensive explanation on Double DQN and why it is needed. 
 
 ## Training
 <img src="files/media/pseoudocode.png" align="right" width="350" height="400"> 
@@ -55,12 +52,14 @@ Please refer here for a comprehensive explanation on Double DQN and why it is ne
 * The training network will train on the data and gather the best parameters for the model. These parameters are then sent to the predicting network, which will execute these actions on the state and then send the results back to the training network. The training network will further use this data to tweak its parameters and train again. By doing this operation of leveling up, we teach the agent how to overtake depending on the state and the actions. Two main parameters are tracked here:
 <br />
 <br />
+<br />
 
 
 ### Loss
 <img src="files/media/image2.png" align="right" width="250" height="200">
 
 * The loss graph will show that the network is learning better after each epoch as it shows the overall the network is making better decisions. The loss graph is drawn for the training network. The loss graph is much smoother after we reduced the learning rate to a very small value and we have also smoothend the loss value using Tensorboard. The following graph is what we got for the final iteration of our implementation. 
+<br />
 
 ### Reward Graph
 <img src="files/media/image5.png" align="right" width="250" height="200">
