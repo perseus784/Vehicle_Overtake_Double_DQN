@@ -6,7 +6,8 @@ This Repo contains code and instructions for implementing Double DQN Reinforcemn
 ***Idea:** The main idea is to learn how to do an overtaking action using Double DQN RL in a top-down view highway environment.
 Since this project uses an OpenAI Gym like format, it will be easy for anyone to modify this project their gym like environment within seconds.*
 
-<br />
+<br /> 
+
 ***Highly recommend reading the article for this project for better explanation: https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples from the movie TENET. Hope you enjoy the read.***
 
 ## Prerequisites
