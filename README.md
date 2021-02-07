@@ -4,14 +4,16 @@
 This Repo contains code and instructions for implementing Double DQN Reinforcemnt Learning in an OpenAI Gym like environment. It takes image as the input and the action space as the output for the network. 
 
 ***Idea:** The main idea is to learn how to do an overtaking action using Double DQN RL in a top-down view highway environment.
-Since this project uses an OpenAI Gym like format, it will be easy for anyone to modify this project their gym like environment within seconds.*
+Since this project uses an OpenAI Gym like format, it will be easy for anyone to modify this project their gym like environment within seconds.* 
+
 <br /> 
 
 
+***Highly recommend reading the article for this project for better explanation:***
 <img src="files/media/Untitled_Diagram_6_2500x.gif"  width="900" height="250">
 <br /> 
 
-***Highly recommend reading the article for this project for better explanation: https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples from the movie TENET. Hope you enjoy the read.***
+***Click https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples and concepts from the movie TENET. Hope you enjoy the read.***
 
 ## Prerequisites
 * Python
@@ -98,5 +100,10 @@ We built a double deep Q learning network and ran the network on the highway env
 <img src="files/media/res4.gif" width="400" height="200">
 
 </p> 
-Again, I highly recommend reading the article for this project for better explanation: https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples from the movie TENET. Hope you enjoy the read.
+***Highly recommend reading the article for this project for better explanation click https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples and concepts from the movie TENET. Hope you enjoy the read.***
+
+<br/>
+
+<img src="files/media/tenet_end"  width="800" height="400">
+
 
