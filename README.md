@@ -47,14 +47,14 @@ We all know the effectiveness of CNNs when it comes to image based data. So, I m
 * To summarize, Double DQN employes two networks. Let's say, one is the training network and another as the predicting network. Predicting network plays the game and gains experience to store with it's knowledge level, the training network uses the stored experiences to train the network in a regular interval. Every certain period, the trained network transfers it's knowledge to the predicting network.   
 
 * This way, the learning is more stable as the agent levels up linearly, do not fluctuate or make random mistakes. If there is only one network, the learning and playing takes place using the same network which might make a particular action overvalued. This is called the maximization bias which results in overestimation of a particular action but using Double DQN overcomes this by using two networks.
-Please refer [here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c) for a comprehensive explanation on Double DQN and why it is needed. 
+Please refer [here](https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c#4302) for a comprehensive explanation on Double DQN and why it is needed. 
 
 ## Training
 <img src="files/media/pseoudocode.png" align="right" width="350" height="380"> 
 
 * Our network consists of two main parts, which is the training network and the predicting network. As we have discussed in the double deep Q learning section, these are our two estimators. The pseudo code of our implementation can seen here.
 
-* [Better explained here](https://medium.com/@ipaar3/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c)
+* [Better explained here](https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c#92aa)
 
 * The training network will train on the data and gather the best parameters for the model. These parameters are then sent to the predicting network, which will execute these actions on the state and then send the results back to the training network. 
 * The training network will further use this data to tweak its parameters and train again. By doing this operation of leveling up, we teach the agent how to overtake depending on the state and the actions. Two main parameters are tracked here:
@@ -91,19 +91,24 @@ Open command prompt on folder root folder and do *python [trail_run.py](https://
 
 ## Results
 
-We built a double deep Q learning network and ran the network on the highway environment. After reiterating for multiple times to get the hyperparamters right, we finally got a version which worked. We can see our agent in action below. Ofcourse, the agent is not perfect because the training is just run for 250k iterations while the standard was to run for 250M iterations. But still we can see the network is able to learn and perform well in most conditions.
+* [Revisions](https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c#bcfa)
+* [Takeaways](https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c#7c7d)
+* We built a double deep Q learning network and ran the network on the highway environment. After reiterating for multiple times to get the hyperparamters right, we finally got a version which worked. 
+* We can see our agent in action below. Ofcourse, the agent is not perfect because the training is just run for 250k iterations while the standard was to run for 250M iterations. But still we can see the network is able to learn and perform well in most conditions.
 
 <p float = "left">
 <img src="files/media/res1.gif" width="400" height="200">
 <img src="files/media/res2.gif" width="400" height="200">
 <img src="files/media/res3.gif" width="400" height="200">
 <img src="files/media/res4.gif" width="400" height="200">
+ 
+</p>  
 
-</p> 
+
 ***Highly recommend reading the article for this project for better explanation click https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples and concepts from the movie TENET. Hope you enjoy the read.***
 
 <br/>
 
-<img src="files/media/tenet_end"  width="800" height="400">
+<img src="files/media/tenet_end.jpg"  width="800" height="400">
 
 
