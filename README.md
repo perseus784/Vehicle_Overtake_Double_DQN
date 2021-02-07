@@ -9,7 +9,7 @@ Since this project uses an OpenAI Gym like format, it will be easy for anyone to
 <br /> 
 
 
-***Highly recommend reading the article for this project for better explanation:***
+### Highly recommend reading the article for this project for better explanation:
 <img src="files/media/Untitled_Diagram_6_2500x.gif"  width="900" height="250">
 <br /> 
 
