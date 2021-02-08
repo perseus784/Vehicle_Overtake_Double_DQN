@@ -9,11 +9,11 @@ Since this project uses an OpenAI Gym like format, it will be easy for anyone to
 <br /> 
 
 
-### Highly recommend reading the article for this project for better explanation:
+### Highly recommend reading the following article for this project for better explanation:
 <img src="files/media/Untitled_Diagram_6_2500x.gif"  width="900" height="250">
 <br /> 
 
-***Click https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples and concepts from the movie TENET. Hope you enjoy the read.***
+***Click https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain the project using examples and concepts from the movie TENET. Hope you enjoy the read.***
 
 ## Prerequisites
 * Python
@@ -105,7 +105,7 @@ Open command prompt on folder root folder and do *python [trail_run.py](https://
 </p>  
 
 
-***Highly recommend reading the article for this project for better explanation click https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain our the project using examples and concepts from the movie TENET. Hope you enjoy the read.***
+***Highly recommend reading the following article for this project for better explanation. Click https://towardsdatascience.com/explaining-double-q-learning-for-openai-environments-using-the-movie-tenet-816dc952f41c. I tried to explain the project using examples and concepts from the movie TENET. Hope you enjoy the read.***
 
 <br/>
 
